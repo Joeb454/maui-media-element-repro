@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             x:Class="MediaElementAudioSessionRepro.MainPage"
+             Title="MediaElement Audio Session Repro">
+
+    <VerticalStackLayout Padding="20" Spacing="20">
+
+        <Label
+            Text="MediaElement iOS Audio Session Bug"
+            FontSize="22"
+            FontAttributes="Bold"
+            HorizontalOptions="Center" />
+
+        <Label
+            Text="This muted, autoplaying MediaElement will interrupt any background audio (e.g. Spotify, Apple Music) on iOS because AVAudioSession is set to CategoryPlayback unconditionally."
+            FontSize="14"
+            HorizontalOptions="Center"
+            HorizontalTextAlignment="Center" />
+
+        <toolkit:MediaElement
+            x:Name="Player"
+            Source="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+            ShouldAutoPlay="True"
+            ShouldMute="True"
+            ShouldShowPlaybackControls="False"
+            Aspect="AspectFill"
+            HeightRequest="300" />
+
+        <Label
+            Text="Steps:&#10;1. Play audio in another app (Spotify, Apple Music, etc.)&#10;2. Launch this app on an iOS device/simulator&#10;3. Observe background audio is interrupted"
+            FontSize="13"
+            HorizontalOptions="Center" />
+
+    </VerticalStackLayout>
+
+</ContentPage>
