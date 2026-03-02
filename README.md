@@ -15,8 +15,8 @@ Even when `ShouldMute="True"`, the `MediaElement`'s underlying `AVPlayer` activa
 
 ## Environment
 
-- .NET MAUI 9.x / 10.x
-- CommunityToolkit.Maui.MediaElement 4.1.1
+- .NET MAUI 10.x
+- CommunityToolkit.Maui.MediaElement 8.0.0
 - iOS 18.x (also reproducible on earlier versions)
 
 ## Build
